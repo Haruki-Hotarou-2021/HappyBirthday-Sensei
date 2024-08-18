@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"/>
+      <link rel="icon" href="/img/logo.svg" type="image/svg">
+      
+      <link rel="manifest" href="app.json">
+  
+    <title>Tanjyobi Omedetou!!!</title>
+    <style>
+      * {
+        image-rendering: pixelated;
+        font-family: 'Press Start 2P', 'Noto Sans JP'
+      }
+        body {
+          font-size: 8px;
+            /*font-family: 'Noto Sans JP', sans-serif;*/
+            background-image: url('/img/background2.jpg');
+            background-size: 100vw 100vh;
+            background-repeat: no-repeat; 
+            background-position: start;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            position: relative;
+            width: 80%;
+            max-width: 1200px;
+        }
+        .character-left,
+        .character-right {
+            width: 150px;
+            height: auto;
+            position: absolute;
+        }
+        .character-left {
+            left: -260px;
+        }
+        .character-right {
+            right: -260px;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            max-height: 80vh;
+            overflow-y: auto;
+            width: 100%;
+            max-width: 800px;
+            text-align: center;
+            position: relative;
+        }
+        h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .button {
+            display: block;
+            width: 150px;
+            padding: 10px;
+            text-align: center;
+            background-color: #c8102e;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+            position: relative;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            user-select: none;
+        }
+        .button:hover {
+            background-color: #a50c1f;
+            user-select: none;
+        }
+        
+        .samurai-4frames {
+            z-index: 10;
+            pointer-events: none;
+            width: 500px; /* Ajuste conforme o tamanho do frame */
+            height: 500px; /* Ajuste conforme o tamanho do frame */
+            /*transform: scale(1, 1);*/
+            background-image: url('/img/kenji/Idle.png'); /* Substitua pelo URL do spritesheet de 4 frames */
+            background-size: 400% 100%;
+            animation: anim4 1s steps(4) infinite;
+        }
+
+        @keyframes anim4 {
+            from { background-position: 0; }
+            to { background-position: -400%;
+            } /* Ajuste conforme o tamanho total do spritesheet */
+        }
+        
+        
+        .samurai-8frames {
+            z-index: 10;
+            pointer-events: none;
+            width: 500px; /* Ajuste conforme o tamanho do frame */
+            height: 500px; /* Ajuste conforme o tamanho do frame */
+            background-image: url('/img/samuraiMack/Idle.png'); /* Substitua pelo URL do spritesheet de 8 frames */
+            background-size: 800% 100%; /* Ajuste conforme o tamanho total do spritesheet */
+            animation: anim8 1s steps(8) infinite;
+        }
+
+        @keyframes anim8 {
+            from { background-position: 0; }
+            to { background-position: -800%; } /* Ajuste conforme o tamanho total do spritesheet */
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+    <!--<img src="/img/samuraiMack/Idle.png" alt="Samurai Mack" class="character-left">-->
+    <div class="samurai-8frames character-left"></div>
+    
+        <div class="card">
+            <h1>Feliz Aniversário, Sensei!</h1>
+            <p>
+                Hoje é um dia especial não só porque celebramos mais um ano da sua vida, mas porque temos a chance de agradecer por tudo o que você representa. Mais do que um sensei, você é um verdadeiro amigo, alguém que guia não só com sabedoria, mas também com coração.
+            </p>
+            <p>
+                Cada lição sua é um presente, e cada momento ao seu lado é uma honra. Que seu aniversário seja repleto de alegria, cercado por aqueles que, assim como eu, têm o privilégio de aprender com você.
+            </p>
+            <p>
+                Obrigado por ser essa luz constante em nosso caminho. Desejo que este novo ciclo traga ainda mais conquistas, paz e felicidade.
+            </p>
+            <br>
+            <a href="/game.html" class="button">Play</a>
+        </div>
+        <!--<img src="/img/kenji/Idle.png" alt="Samurai Kenji" class="character-right">-->
+        <div class="samurai-4frames character-right"></div>
+
+      </div>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensagem de Aniversário</title>
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-image: url('/img/background.png'); /* Substitua pelo URL da imagem de fundo */
+            background-size: cover;
+            background-position: start;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            position: relative;
+            width: 80%;
+            max-width: 1200px;
+        }
+        .character-left,
+        .character-right {
+            width: 150px;
+            height: auto;
+            position: absolute;
+            background-size: cover;
+            background-position: start;
+        }
+        .character-left {
+            left: 0;
+        }
+        .character-right {
+            right: 0;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            max-height: 80vh;
+            overflow-y: auto;
+            width: 100%;
+            max-width: 800px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="/img/samuraiMack/Idle.png" alt="Samurai Mack" class="character-left"> <!-- Substitua pelo URL da imagem do personagem esquerdo -->
+        <div class="card">
+            <h1>Mensagem de Aniversário</h1>
+            <p>
+                Este jogo simboliza sua força em frente aos problemas da vida. Diante você, todos os oponentes, todo e qualquer problema se tornam impotentes, pois tua força de vontade e determinação são maiores do que qualquer dificuldade.
+            </p>
+            <p>
+                Neste dia especial, celebramos não apenas mais um ano de vida, mas também a força e a resiliência que você demonstra a cada desafio. Que este novo ciclo seja repleto de conquistas e alegrias, e que você continue a inspirar todos ao seu redor com sua coragem e determinação. Parabéns pelo seu aniversário! Que seu caminho seja sempre iluminado pela mesma força que você transmite a todos nós.
+            </p>
+        </div>
+        <img src="/img/kenji/Idle.png" alt="Samurai Kenji" class="character-right"> <!-- Substitua pelo URL da imagem do personagem direito -->
+    </div>
+</body>
+</html>

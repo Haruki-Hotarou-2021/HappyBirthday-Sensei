@@ -1,0 +1,17 @@
+{
+  "name": "Happy Birthday",
+  "short_name": "HappyBirthday",
+  "description": "/",
+  "start_url": "index.html",
+  "display": "standalone",
+  "orientation": "landscape",
+  "background_color": "#4a2c2a",
+  "theme_color": "#d4a017",
+  "icons": [
+    {
+      "src": "/img/logo.svg",
+      "sizes": "192x192",
+      "type": "image/svg"
+    }
+  ]
+}

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"/>
+      <link rel="icon" href="/img/logo.ico" type="image/x-icon">
+      
+      <link rel="manifest" href="app.json">
+
+    <title>Congratulations</title>
+    <style>
+      * {
+        image-rendering: pixelated;
+        font-family: 'Press Start 2P', 'Noto Sans JP'
+      }
+        body {
+            /*font-family: 'Noto Sans JP', sans-serif;*/
+            font-size: 8px;
+            background-image: url('/img/background.png');
+            background-size: 100vw 100vh;
+            background-repeat: no-repeat; 
+            background-position: start;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            position: relative;
+            width: 80%;
+            max-width: 1200px;
+        }
+        .character-left,
+        .character-right {
+            width: 150px;
+            height: auto;
+            position: absolute;
+        }
+        .character-left {
+            left: -260px;
+        }
+        .character-right {
+            right: -260px;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            max-height: 80vh;
+            overflow-y: auto;
+            width: 100%;
+            max-width: 800px;
+            text-align: center;
+            position: relative;
+        }
+        h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        
+        .samurai-4frames {
+            z-index: 10;
+            pointer-events: none;
+            width: 500px; /* Ajuste conforme o tamanho do frame */
+            height: 500px; /* Ajuste conforme o tamanho do frame */
+            /*transform: scale(1, 1);*/
+            background-image: url('/img/kenji/Idle.png'); /* Substitua pelo URL do spritesheet de 4 frames */
+            background-size: 400% 100%;
+            animation: anim4 1s steps(4) infinite;
+        }
+
+        @keyframes anim4 {
+            from { background-position: 0; }
+            to { background-position: -400%;
+            } /* Ajuste conforme o tamanho total do spritesheet */
+        }
+        
+        
+        .samurai-8frames {
+            z-index: 10;
+            pointer-events: none;
+            width: 500px; /* Ajuste conforme o tamanho do frame */
+            height: 500px; /* Ajuste conforme o tamanho do frame */
+            background-image: url('/img/samuraiMack/Idle.png'); /* Substitua pelo URL do spritesheet de 8 frames */
+            background-size: 800% 100%; /* Ajuste conforme o tamanho total do spritesheet */
+            animation: anim8 1s steps(8) infinite;
+        }
+
+        @keyframes anim8 {
+            from { background-position: 0; }
+            to { background-position: -800%; } /* Ajuste conforme o tamanho total do spritesheet */
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+    <!--<img src="/img/samuraiMack/Idle.png" alt="Samurai Mack" class="character-left">-->
+    <div class="samurai-8frames character-left"></div>
+    
+        <div class="card">
+            <h1>Congratulações</h1>
+            <p>
+                Este jogo simboliza sua força em frente aos problemas da vida. Diante você, todos os oponentes, todo e qualquer problema se tornam impotentes, pois tua força de vontade e determinação são maiores do que qualquer dificuldade.
+            </p>
+            <p>
+                Neste dia especial, celebramos não apenas mais um ano de vida, mas também a força e a resiliência que você demonstra a cada desafio. Que este novo ciclo seja repleto de conquistas e alegrias, e que você continue a inspirar todos ao seu redor com sua coragem e determinação. Parabéns pelo seu aniversário! Que seu caminho seja sempre iluminado pela mesma força que você transmite a todos nós.
+            </p>
+            <p>
+                  Oss!!!
+            </p>
+            <br>
+        </div>
+        <!--<img src="/img/kenji/Idle.png" alt="Samurai Kenji" class="character-right">-->
+        <div class="samurai-4frames character-right"></div>
+
+      </div>
+</body>
+</html>
