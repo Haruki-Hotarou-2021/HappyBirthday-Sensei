@@ -52,8 +52,9 @@
     position: fixed;
     width: 60px;
     height: 60px;
-    left: 0;
-    bottom: -20%;
+    left: 20%;
+    bottom: 20%;
+    transform: scale(80%);
     ">
     
     <img src="/img/controls/left.png" id="button-a"
@@ -61,8 +62,9 @@
     position: fixed;
     width: 60px;
     height: 60px;
-    left: -20%;
-    bottom: -20%;
+    left: 5%;
+    bottom: 20%;
+    transform: scale(80%);
     ">
     
     <img src="/img/controls/jump.png" id="button-w" 
@@ -70,8 +72,9 @@
     position: fixed;
     width: 60px;
     height: 60px;
-    right: -20%;
-    bottom: -10%;
+    right: 20%;
+    bottom: 10%;
+    transform: scale(80%);
     ">
     
     <img src="/img/controls/attack.png" id="button-space"
@@ -79,8 +82,9 @@
     position: fixed;
     width: 60px;
     height: 60px;
-    right: -20%;
-    bottom: -40%;
+    right: 20%;
+    bottom: 40%;
+    transform: scale(80%);
     ">
     
     
@@ -91,11 +95,10 @@
       style="
         position: absolute;
         display: flex;
-        width: 150%;
+        width: 100%;
         align-items: center;
         padding: 20px;
         z-index: 10;
-        transform: translate(-17%, 75%);
       "
     >
       <!-- player health -->
@@ -169,20 +172,19 @@
     <div
       id="displayText"
       style="
-        position: fixed;
+        position: absolute;
         color: red;
         align-items: center;
         justify-content: center;
-        top: 70%;
+        top: 0;
         right: 0;
         bottom: 0;
         left: 0;
         display: none;
         font-weight: bold;
-        font-size: 34px;
+        font-size: 18px;
         z-index: 10;
-        width: 200%;
-        transform: translateX(-25%);
+        width: 100%;
       "
     >
       Tie
@@ -900,7 +902,7 @@ window.addEventListener('keyup', (event) => {
     document.addEventListener('contextmenu', (event) => {
       event.preventDefault();
     });
-    //document.body.style.transform = 'scale(0.6) translateY(-50%)';
+    //document.body.style.transform = 'scale(0.6) translhttps://fonts.googleapis.comateY(-50%)';
   </script>
 </body>
 </html>
