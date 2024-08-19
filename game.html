@@ -84,7 +84,6 @@
     height: 60px;
     right: 20%;
     bottom: 40%;
-    transform: scale(80%);
     ">
     
     
@@ -886,7 +885,10 @@ window.addEventListener('keyup', (event) => {
     // Ataque
     attack.addEventListener('touchend', () => {handleButtonRelease('space')});
     
-    // Prevent Default
+    // Prevent Default e ajuste de tamanho
+    //let w = innerWidth;
+    //let h = innerHeight;
+    
     attack.addEventListener('contextmenu', (event) => {
       event.preventDefault();
     });
@@ -902,6 +904,14 @@ window.addEventListener('keyup', (event) => {
     document.addEventListener('contextmenu', (event) => {
       event.preventDefault();
     });
+    
+    attack.style.transform = `scale(${(w*0.20)/100})`;
+    console.log(attack.style.transform);
+    
+    jump.style.transform = `scale(${(w*0.20)/100})`;
+    left.style.transform = `scale(${(w*0.20)/100})`;
+    right.style.transform = `scale(${(w*0.20)/100})`;
+    
     //document.body.style.transform = 'scale(0.6) translhttps://fonts.googleapis.comateY(-50%)';
   </script>
 </body>
