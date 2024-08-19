@@ -905,12 +905,16 @@ window.addEventListener('keyup', (event) => {
       event.preventDefault();
     });
     
-    attack.style.transform = `scale(${(w*0.20)/100})`;
-    console.log(attack.style.transform);
+    let calc = (w + h) / 2;
+    let size = 0.18;
     
-    jump.style.transform = `scale(${(w*0.20)/100})`;
-    left.style.transform = `scale(${(w*0.20)/100})`;
-    right.style.transform = `scale(${(w*0.20)/100})`;
+    attack.style.transform = `scale(${(calc/100)*size})`;
+    jump.style.transform = `scale(${(calc/100)*size})`;
+    left.style.transform = `scale(${(calc/100)*size})`;
+    right.style.transform = `scale(${(calc/100)*size})`;
+    
+    console.log(attack.style.transform);
+
     
     //document.body.style.transform = 'scale(0.6) translhttps://fonts.googleapis.comateY(-50%)';
   </script>
